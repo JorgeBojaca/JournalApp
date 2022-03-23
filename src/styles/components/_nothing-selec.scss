@@ -1,0 +1,26 @@
+.nothing-selected__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  background-color: white;
+  color: $primary;
+  height: 100vh;
+}
+
+.nothing-selected__menu-btn {
+  display: none;
+}
+
+@media screen and (max-width: 400px) {
+  .nothing-selected__menu-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 15px 12px;
+    display: inline;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+}

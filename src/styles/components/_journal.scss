@@ -1,0 +1,229 @@
+.journal__main {
+  background-color: white;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  caret-color: transparent;
+  transition: background-color ease 2s;
+  justify-content: space-between;
+}
+.journal__container {
+  flex: 1;
+}
+
+.journal__sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: $primary;
+  color: white;
+  width: 300px;
+  height: 100vh;
+  // z-index: 10;
+  border-radius: 3px;
+  position: relative;
+  &.hide {
+    display: none;
+  }
+}
+
+@keyframes sidebarAnimation {
+  0% {
+    position: relative;
+    background-color: #fff;
+    left: -300px;
+  }
+  50% {
+    position: relative;
+    left: 0px;
+    background-color: #f0f;
+  }
+  100% {
+    background-color: #f00;
+    position: relative;
+    left: 0px;
+  }
+}
+.journal__sidebar-user {
+  // text-align: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: bolder;
+  .btn {
+    color: white;
+    font-size: 1rem;
+    transition: color ease 0.3s;
+    &:hover {
+      color: darken($color: white, $amount: 20);
+    }
+  }
+}
+.journal__sidebar-new-entry {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: color ease 0.2s;
+  cursor: pointer;
+  flex: 2;
+  i {
+    margin-bottom: 10px;
+  }
+  &:hover {
+    color: $light-grey;
+  }
+}
+.journal__entries {
+  overflow-y: scroll;
+  width: 100%;
+  padding-left: 10px; //scroll width
+  flex: 5;
+  animation: enterEntries 0.3s linear;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: $primary; /* color of the tracking area */
+  }
+  &::-webkit-scrollbar-thumb {
+    //background-color: black; /* color of the scroll thumb */
+    background-color: rgba(
+      $color: #000000,
+      $alpha: 0.3
+    ); /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+    border: 2px solid $primary; /* creates padding around scroll thumb */
+  }
+}
+@keyframes enterEntries {
+  from {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.journal__entry {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  height: 4.3rem;
+  width: 100%;
+  color: white;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: darken($color: $primary, $amount: 10);
+  transition: background ease 0.5s;
+  &:hover {
+    background-color: lighten($color: $primary, $amount: 10);
+  }
+}
+.journal__entry-box {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 5px;
+  height: 90%;
+  overflow: hidden;
+  flex: 3;
+}
+
+.journal__entry-box-image {
+  display: flex;
+  flex: 1;
+  text-align: center;
+  justify-content: center;
+}
+.journal__entry-image {
+  height: 2.5rem;
+  width: 2.5rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+.journal__entry-box-title {
+  align-self: flex-start;
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.journal__entry-box-body {
+  position: relative;
+  width: 100%;
+  font-size: 0.9rem;
+  align-self: flex-start;
+  max-height: 2.1em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.journal__entry-box-date {
+  font-size: 0.7rem;
+  align-self: flex-end;
+}
+
+.journal__sidebar-menu-button {
+  display: none;
+}
+
+@media screen and (min-width: 401px) {
+  .journal__sidebar.no-fixed {
+    display: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  .journal__sidebar.fixed {
+    display: none;
+  }
+  .journal__sidebar {
+    position: absolute;
+    width: 90%;
+    z-index: 300;
+    animation: enterSidebar 0.5s linear 1;
+    &.hide {
+      display: flex;
+      animation: exitSidebar 0.5s linear 1;
+      left: -350px;
+    }
+  }
+  @keyframes enterSidebar {
+    from {
+      left: -100%;
+    }
+    to {
+      left: 0;
+    }
+  }
+  @keyframes exitSidebar {
+    from {
+      // left: 0;
+      transform: translateX(350px);
+    }
+    to {
+      // left: -100%;
+    }
+  }
+  .journal__sidebar-menu-button {
+    display: inline-block;
+  }
+  .journal__sidebar-to-hide {
+    position: absolute;
+    background-color: black;
+    opacity: 0.1;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+  }
+}

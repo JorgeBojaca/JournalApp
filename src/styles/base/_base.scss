@@ -1,0 +1,33 @@
+@font-face {
+  font-family: RobotoRegular;
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+
+* {
+  font-family: RobotoRegular, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.mt-1 {
+  margin-top: 5px;
+}
+.mt-5 {
+  margin-top: 20px;
+}
+.mb-1 {
+  margin-bottom: 5px;
+}
+.mb-5 {
+  margin-bottom: 20px;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
