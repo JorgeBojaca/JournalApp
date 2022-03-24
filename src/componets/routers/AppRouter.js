@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-import { db, firebase } from '../../firebase/firebase-config';
+import { firebase } from '../../firebase/firebase-config';
 
 import { AuthRouter } from './AuthRouter';
 import { JournalRouter } from './JournalRouter';

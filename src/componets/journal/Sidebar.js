@@ -11,7 +11,9 @@ export const Sidebar = () => {
   const [isInit, setIsInit] = useState(true);
   const { showMenu } = useSelector(({ ui }) => ui);
 
-  //Evita la animación inicial de salida en el menu
+  /*Evita la animación inicial de salida en el menu 
+    Depende únicamente de showMenu es decir no se debe agregar isInit ni displayInitMenu
+  */
   useEffect(() => {
     if (isInit) {
       setIsInit(false);

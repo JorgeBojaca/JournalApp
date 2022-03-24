@@ -1,7 +1,6 @@
 import React, { useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleMenu } from '../../actions/ui';
-import { getApiKey } from '../../helpers/apiValues';
 import { JournalEntry } from './JournalEntry';
 
 export const JournalEntries = () => {

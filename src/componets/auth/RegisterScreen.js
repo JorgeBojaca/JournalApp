@@ -7,7 +7,6 @@ import isEmail from 'validator/lib/isEmail';
 import { startRegisterNameEmailPassword } from '../../actions/auth';
 
 export const RegisterScreen = () => {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const { uiErrorMsg } = useSelector((state) => state.ui);
 
