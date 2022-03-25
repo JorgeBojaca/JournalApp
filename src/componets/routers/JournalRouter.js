@@ -6,8 +6,8 @@ export const JournalRouter = () => {
   return (
     <div className="journal__main">
       <Routes>
-        <Route path="/" element={<JournalScreen />} />
-        <Route path="*" element={<Navigate to="/" />} />
+        <Route path="JournalApp" element={<JournalScreen />} />
+        <Route path="*" element={<Navigate to="JournalApp" />} />
       </Routes>
     </div>
   );

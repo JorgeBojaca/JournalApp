@@ -8,12 +8,12 @@ export const AuthRouter = () => {
     <div className="auth__main">
       <div className="auth__box-container">
         <Routes>
-          <Route path="auth">
+          <Route path="JournalApp/auth">
             <Route index element={<Navigate to="login" />} />
             <Route path="login" element={<LoginScreen />} />
             <Route path="register" element={<RegisterScreen />} />
           </Route>
-          <Route path="*" element={<Navigate to="auth/login" />} />
+          <Route path="*" element={<Navigate to="JournalApp/auth/login" />} />
         </Routes>
       </div>
     </div>
