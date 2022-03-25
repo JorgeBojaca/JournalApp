@@ -62,7 +62,7 @@ export const LoginScreen = () => {
         <span className="logo"></span>
         <button onClick={handleGoogleLogin}>Sign in with google</button>
       </div>
-      <Link to="/auth/register" className="link">
+      <Link to="/JournalApp/auth/register" className="link">
         Create new account
       </Link>
     </>
