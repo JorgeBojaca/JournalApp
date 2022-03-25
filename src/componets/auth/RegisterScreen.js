@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { removeErrorMsg, setErrorMsg } from '../../actions/ui';
 import { useForm } from '../../hooks/useForm';
 import isEmail from 'validator/lib/isEmail';
@@ -12,10 +12,10 @@ export const RegisterScreen = () => {
 
   const { form, handleInput, validateForm, errorForm } = useForm(
     {
-      name: 'Jorge',
-      email: 'jl@bojaca.com',
-      password: '123456',
-      password_confirm: '123456',
+      name: '',
+      email: '',
+      password: '',
+      password_confirm: '',
     },
     ['name', 'email', 'password', 'password_confirm'],
     [['password', 'password_confirm']]

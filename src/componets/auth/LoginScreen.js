@@ -10,8 +10,8 @@ export const LoginScreen = () => {
 
   const { form, handleInput, validateForm, errorForm } = useForm(
     {
-      email: 'jl@bojaca.com',
-      password: '123456',
+      email: '',
+      password: '',
     },
     ['email', 'password']
   );
@@ -24,7 +24,6 @@ export const LoginScreen = () => {
     }
   };
   const handleGoogleLogin = () => {
-    console.log('google click');
     dispatch(startGoogleLogin());
   };
   return (
