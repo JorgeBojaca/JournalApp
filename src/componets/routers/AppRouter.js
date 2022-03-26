@@ -36,7 +36,7 @@ export const AppRouter = () => {
       {loading && !component ? (
         <LoadingScreen />
       ) : (
-        <BrowserRouter>
+        <BrowserRouter basename="JournalApp">
           {!uid ? <AuthRouter /> : <JournalRouter />}
         </BrowserRouter>
       )}
