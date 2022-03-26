@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/JournalApp/static/css/main.64350d03.css",
-    "main.js": "/JournalApp/static/js/main.5a7227ff.js",
+    "main.js": "/JournalApp/static/js/main.20c3c467.js",
     "static/media/Roboto-Regular.ttf": "/JournalApp/static/media/Roboto-Regular.a8d6ac03c7b96b7acb62.ttf",
     "index.html": "/JournalApp/index.html",
     "main.64350d03.css.map": "/JournalApp/static/css/main.64350d03.css.map",
-    "main.5a7227ff.js.map": "/JournalApp/static/js/main.5a7227ff.js.map"
+    "main.20c3c467.js.map": "/JournalApp/static/js/main.20c3c467.js.map"
   },
   "entrypoints": [
     "static/css/main.64350d03.css",
-    "static/js/main.5a7227ff.js"
+    "static/js/main.20c3c467.js"
   ]
 }
