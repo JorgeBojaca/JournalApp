@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Journal App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a Journal that use [Firebase Authentication](https://firebase.google.com/docs/auth/) and [Cloud Firestore](https://firebase.google.com/docs/firestore/)
 
 ## Available Scripts
 
