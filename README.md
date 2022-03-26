@@ -1,4 +1,4 @@
-# [Journal App](jorgebojaca.github.io/JournalApp)
+# [Journal App](https://jorgebojaca.github.io/JournalApp)
 
 This project is a Journal that use [Firebase Authentication](https://firebase.google.com/docs/auth/) and [Cloud Firestore](https://firebase.google.com/docs/firestore/)
 
