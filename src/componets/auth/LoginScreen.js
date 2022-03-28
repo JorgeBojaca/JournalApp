@@ -27,7 +27,7 @@ export const LoginScreen = () => {
     dispatch(startGoogleLogin());
   };
   return (
-    <>
+    <div className="animate__animated animate__bounceIn">
       <h3 className="auth__title">Login</h3>
       <form onSubmit={handleSubmit}>
         <input
@@ -62,9 +62,9 @@ export const LoginScreen = () => {
         <span className="logo"></span>
         <button onClick={handleGoogleLogin}>Sign in with google</button>
       </div>
-      <Link to="/JournalApp/auth/register" className="link">
+      <Link to="/auth/register" className="link">
         Create new account
       </Link>
-    </>
+    </div>
   );
 };

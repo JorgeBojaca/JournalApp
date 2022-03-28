@@ -47,7 +47,7 @@ export const RegisterScreen = () => {
     }
   };
   return (
-    <>
+    <div className="animate__animated animate__bounceIn">
       <h3 className="auth__title">Register</h3>
       {uiErrorMsg && <div className="auth__box-error">{uiErrorMsg}</div>}
       <form onSubmit={handleSubmit}>
@@ -102,6 +102,6 @@ export const RegisterScreen = () => {
       >
         Already registered?
       </Link>
-    </>
+    </div>
   );
 };
