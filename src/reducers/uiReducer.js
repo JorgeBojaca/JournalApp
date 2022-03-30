@@ -2,7 +2,6 @@ import { types } from '../types/types';
 
 const initialState = {
   loading: true,
-  component: null,
   uiErrorMsg: null,
   showMenu: false,
 };
@@ -23,13 +22,11 @@ export const uiReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: true,
-        component: action.payload,
       };
     case types.uiFinishLoading:
       return {
         ...state,
         loading: false,
-        component: null,
       };
 
     case types.uiToggleMenu:

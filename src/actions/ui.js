@@ -5,11 +5,12 @@ export const setErrorMsg = (msg) => ({
   payload: msg,
 });
 
-export const removeErrorMsg = () => ({ type: types.uiRemoveError });
+export const removeErrorMsg = () => ({
+  type: types.uiRemoveError,
+});
 
-export const startLoading = (comp = null) => ({
+export const startLoading = () => ({
   type: types.uiStartLoading,
-  payload: comp,
 });
 export const finishLoading = () => ({
   type: types.uiFinishLoading,
