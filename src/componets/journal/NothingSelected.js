@@ -12,7 +12,7 @@ export const NothingSelected = () => {
         <i className="fa-solid fa-bars" onClick={handleMenu}></i>
       </div>
       <i className="fa-regular fa-star fa-5x"></i>
-      <h1>Nada Seleccionado</h1>
+      <h1>Ninguna Entrada Seleccionada</h1>
     </div>
   );
 };
