@@ -12,7 +12,7 @@ import { useNotesObs } from '../../hooks/useNotesObs';
 
 export const AppRouter = () => {
   const { uid } = useSelector(({ auth }) => auth);
-  const { loading, component } = useSelector(({ ui }) => ui);
+  const { loading } = useSelector(({ ui }) => ui);
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -33,7 +33,7 @@ export const AppRouter = () => {
   useNotesObs(uid); //Hook encargado de observar cambios en las notas
   return (
     <>
-      {loading && !component ? (
+      {loading ? (
         <LoadingScreen />
       ) : (
         <BrowserRouter basename="JournalApp">
