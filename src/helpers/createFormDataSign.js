@@ -2,11 +2,15 @@ import sha1 from 'sha1';
 import { getApiKey, getApiSecret } from './apiValues';
 
 const createFormDataSign = async (data) => {
-  // const api_secret = process.env.REACT_APP_API_SECRET;
-  // const api_key = process.env.REACT_APP_API_KEY;
-  const api_key = await getApiKey();
-  const api_secret = await getApiSecret();
-
+  let api_key;
+  let api_secret;
+  if (process.env.NODE_ENV === 'test') {
+    api_key = process.env.REACT_APP_API_KEY;
+    api_secret = process.env.REACT_APP_API_SECRET;
+  } else {
+    api_key = await getApiKey();
+    api_secret = await getApiSecret();
+  }
   const formData = new FormData();
 
   let strToSign = Object.keys(data)
