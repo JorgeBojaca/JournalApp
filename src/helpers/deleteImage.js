@@ -20,18 +20,11 @@ const deleteImage = async (urlImage) => {
   return null;
 };
 
-const getImageId = (urlImage) => {
-  const urlImage_rev = urlImage.split('').reverse().join('');
-
-  const dotIdx = urlImage_rev.indexOf('.');
-  const slaIdx = urlImage_rev.indexOf('/');
-  if (dotIdx !== -1 && slaIdx !== -1) {
-    const idImage_rev = urlImage_rev.substring(dotIdx + 1, slaIdx);
-
-    const idImage = idImage_rev.split('').reverse().join('');
-    return idImage;
-  }
-  return null;
+export const getImageId = (urlImage) => {
+  const segments = urlImage.split('/');
+  const imgSegment = segments.pop();
+  const imgId = imgSegment.substring(0, imgSegment.indexOf('.'));
+  return imgId;
 };
 
 export default deleteImage;
