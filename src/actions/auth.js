@@ -25,9 +25,14 @@ export const startGoogleLogin = () => (dispatch) => {
   firebase
     .auth()
     .signInWithPopup(googleAuthProvider)
-    .then(({ user: { displayName, uid } }) =>
-      dispatch(login(uid, displayName))
-    );
+    .then(({ user: { displayName, uid } }) => {
+      dispatch(login(uid, displayName));
+      dispatch(finishLoading());
+    })
+    .catch(({ message }) => {
+      Swal.fire('Error', message, 'error');
+      dispatch(finishLoading());
+    });
 };
 
 export const startRegisterNameEmailPassword = (email, password, name) => (
