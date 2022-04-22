@@ -10,7 +10,7 @@ export const LoginScreen = () => {
 
   const { form, handleInput, validateForm, errorForm } = useForm(
     {
-      email: '',
+      email: 'vscode.dev',
       password: '',
     },
     ['email', 'password']
